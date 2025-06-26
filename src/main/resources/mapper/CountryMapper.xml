@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qualco.demo.mapper.CountryMapper">
+
+    <select id="getAllCountries" resultType="com.qualco.demo.model.Country">
+        SELECT name, area, country_code2
+        FROM countries
+        ORDER BY name;
+    </select>
+
+</mapper>
