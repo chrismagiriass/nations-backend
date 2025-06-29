@@ -5,10 +5,14 @@
 
 <mapper namespace="com.qualco.demo.mapper.CountryMapper">
 
-    <select id="getAllCountries" resultType="com.qualco.demo.model.Country">
-        SELECT name, area, country_code2
+    <select id="getAllCountriesPaginated" resultType="com.qualco.demo.model.Country">
+        SELECT country_id, name, area, country_code2
         FROM countries
-        ORDER BY name;
+        ORDER BY name
+    </select>
+
+    <select id="countCountries" resultType="int">
+        SELECT COUNT(*) FROM countries
     </select>
 
 </mapper>
